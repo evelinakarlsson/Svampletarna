@@ -25,7 +25,7 @@ function loggaIn() {
 }
 
 function loggaUt() {
-    loginForm.style.display = "block"; 
+    loginForm.style.display = "grid"; 
     logoutBtn.style.display = "none";
     msgElem.innerHTML = "";
     namnInput.value = "";

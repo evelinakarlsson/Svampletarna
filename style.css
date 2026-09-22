@@ -1,23 +1,24 @@
-* {
+* { /* Grundinställningar för alla element*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    /* Delar upp sidan i tre rader (header, main, footer) med grid,
-       så vi kan styra var varje sektion hamnar och att footer 
-       alltid ligger i botten */
+    /* Delar upp sidan i tre rader: header, main, footer. Header och footer får det 
+    utrymme de behöver medan main tar resterande utrymme.*/
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 
-    background-color: #E8E5D9;
+    background-color: #f5f4ef;
     color: #564E4D;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img {
+img { /* Bilden anpassar sig efter tillgängligt utrymme och blir max 400px bred. 
+    Höjden anpassas automatiskt så att bildens proportioner behålls. Bilden
+    centreras och får rundade hörn.*/
     display: block;
     max-width: 400px;
     width: 100%;
@@ -26,8 +27,15 @@ img {
     border-radius: 8px;
 }
 
+/* Gemensamt utseende för sidhuvud och sidfot. Centrerar texten och skapar utrymme mellan innehållet och kanterna */
+header, footer {
+    background-color: #e5eae1;
+    text-align: center;
+    padding: 20px;
+}
+
 main {
-    /* Lägger main:s innehåll i en kolumn, vilket funkar bra för mobilvyn.
+    /* Huvudinnehållet (main) placeras i en kolumn, vilket funkar bra för mobilvyn.
         Padding skapar luft mellan innehållet och skärmkanten. */
     display: flex;
     flex-direction: column;
@@ -35,9 +43,30 @@ main {
     max-width: 500px;
     margin: 0 auto;
 }
+/*Inloggningsformuläret delas upp i två kolumner med grid: etiketter till vänster
+och inmatningsfält till höger */
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
 
-footer {}
-
+/* Gemensam storlek på knapparna. Fit-content gör baraknappen så bred som innehållet 
+behöver. Padding ger luft mellan texten och knappens kanter */
+button {
+    width: fit-content;
+    padding: 4px 8px;
+}
+/* Placerar Logga in-knappen i formulärets andra kolumn */
+#btn1 {
+    grid-column: 2;
+    
+}
+/* Skapar mellanrum mellan meddelandet och Logga ut-knappen */
+#btn2 {
+    margin-top: 10px;
+}
+/* Anpassningar för större skärmar */
 @media (min-width: 768px) {
 
     main {
