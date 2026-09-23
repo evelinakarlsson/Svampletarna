@@ -16,26 +16,23 @@
     <main>
         <div class="login-container">
             <img src="svamp.jpg" alt="Bild på svampar i en korg">
+            
+            <div class="login-content">
+                <form id="loginForm">
+                    <label for="namn">Namn:</label>
+                    <input type="text" id="namn" name="namn">
 
-            <form id="loginForm">
-                <label for="namn">Namn:</label>
-                <input type="text" id="namn" name="namn">
+                    <label for="losenord">Lösenord:</label>
+                    <input type="password" id="losenord" name="losenord">
 
-                <label for="losenord">Lösenord:</label>
-                <input type="password" id="losenord" name="losenord">
+                    <button type="button" id="btn1">Logga in</button>
+                </form>
 
-                <button type="button" id="btn1">Logga in</button>
-
-            </form>
-        
-        <p id="message"></p>
-        <button type="button" id="btn2">Logga ut</button>
-
+                <p id="message"></p>
+                <button type="button" id="btn2">Logga ut</button>
+            </div>
 
         </div>
-
-        
-        
     </main>
 
     <footer>

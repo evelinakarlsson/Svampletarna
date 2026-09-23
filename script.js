@@ -1,8 +1,8 @@
-// Deklsrerar konstanter för rätt namn och rätt lösenord vid inloggning
+// Deklarerar konstanter för rätt namn och rätt lösenord vid inloggning
 const rattNamn = "Kalle";
 const rattLosenord = "qwe123";
 
-// Skapar konstanter med referenser till HTML-element för att kuna läsa av eller ändra dem i javascript
+// Skapar konstanter med referenser till HTML-element för att kunna läsa av eller ändra dem i javascript
 const namnInput = document.getElementById("namn");
 const losenordInput = document.getElementById("losenord");
 const msgElem = document.getElementById("message");
