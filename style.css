@@ -68,12 +68,12 @@ button {
     padding: 4px 8px;
 }
 /* Placerar Logga in-knappen i formulärets andra kolumn */
-#btn1 {
+#loginBtn {
     grid-column: 2;
     
 }
 /* Skapar mellanrum mellan meddelandet och Logga ut-knappen */
-#btn2, #message {
+#logoutBtn, #message {
     margin-top: 10px;
 }
 /* Anpassningar för större skärmar */

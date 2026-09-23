@@ -2,13 +2,13 @@
 const rattNamn = "Kalle";
 const rattLosenord = "qwe123";
 
-// Skapar konstanter med referenser till HTML-element för att kunna läsa av eller ändra dem i javascript
+// Skapar konstanter med referenser till HTML-element för att kunna läsa av eller ändra dem i JavaScript
 const namnInput = document.getElementById("namn");
 const losenordInput = document.getElementById("losenord");
 const msgElem = document.getElementById("message");
 const loginForm = document.getElementById("loginForm");
-const loginBtn = document.getElementById("btn1");
-const logoutBtn = document.getElementById("btn2");
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
 
 // Gömmer logga ut-knappen eftersom ingen är inloggad när sidan laddas
 logoutBtn.style.display = "none";
@@ -25,7 +25,7 @@ function loggaIn() {
     if (namnInput.value === rattNamn && losenordInput.value === rattLosenord) {
         msgElem.textContent = "Välkommen " + namnInput.value + ", du är nu inloggad";
         msgElem.style.color = ""; // Återställer textfärgen om man testat att logga in och uppgivit felaktiga uppgifter,
-                                  // för då blir texten röd, och behöver därför nollställas för att välkomstexten inte också ska bli röd
+                                  // för då blir texten röd, och behöver därför nollställas för att välkomsttexten inte också ska bli röd
 
         // När man är inloggad göms inloggningsformuläret och logga ut-knappen visas
         loginForm.style.display = "none";
