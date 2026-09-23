@@ -43,6 +43,16 @@ main {
     max-width: 500px;
     margin: 0 auto;
 }
+
+h1 {
+    font-size: 3rem;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 /*Inloggningsformuläret delas upp i två kolumner med grid: etiketter till vänster
 och inmatningsfält till höger */
 form {
@@ -63,14 +73,19 @@ button {
     
 }
 /* Skapar mellanrum mellan meddelandet och Logga ut-knappen */
-#btn2 {
+#btn2, #message {
     margin-top: 10px;
 }
 /* Anpassningar för större skärmar */
 @media (min-width: 768px) {
 
     main {
-        max-width: 600px;
-        padding: 40px;
+        max-width: 900px;
+    }
+
+    /* Gör så att logga in-containern placeras i rad. */
+    .login-container {
+        flex-direction: row;
+        align-items: center;
     }
 }
