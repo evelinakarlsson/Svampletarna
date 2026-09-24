@@ -47,4 +47,3 @@ function loggaUt() {
     namnInput.value = "";
     losenordInput.value = "";
 }
-

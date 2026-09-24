@@ -1,12 +1,13 @@
-* { /* Grundinställningar för alla element*/
+/* Grundinställningar för alla element*/
+* { 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Delar upp sidan i tre rader: header, main, footer. Header och footer får det utrymme de behöver 
+    medan main tar resterande utrymme.*/
 body {
-    /* Delar upp sidan i tre rader: header, main, footer. Header och footer får det 
-    utrymme de behöver medan main tar resterande utrymme.*/
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -16,9 +17,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img { /* Bilden anpassar sig efter tillgängligt utrymme och blir max 400px bred. 
-    Höjden anpassas automatiskt så att bildens proportioner behålls. Bilden
-    centreras och får rundade hörn.*/
+/* Bilden anpassar sig efter tillgängligt utrymme och blir max 400px bred. Höjden anpassas automatiskt 
+    så att bildens proportioner behålls. Bilden centreras och får rundade hörn.*/
+img { 
     display: block;
     max-width: 400px;
     width: 100%;
@@ -34,9 +35,9 @@ header, footer {
     padding: 20px;
 }
 
+/* Huvudinnehållet (main) placeras i en kolumn, vilket funkar bra för mobilvyn. Padding skapar luft 
+    mellan innehållet och skärmkanten. */
 main {
-    /* Huvudinnehållet (main) placeras i en kolumn, vilket funkar bra för mobilvyn.
-        Padding skapar luft mellan innehållet och skärmkanten. */
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -44,26 +45,31 @@ main {
     margin: 0 auto;
 }
 
+/* Gör huvudrubriken större */
 h1 {
     font-size: 3rem;
 }
 
+/* Gör login-containern till en flex-container och placerar elementen under varandra i en kolumn. Gap skapar 
+    mellanrum mellan elementen. */
 .login-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-/*Inloggningsformuläret delas upp i två kolumner med grid: etiketter till vänster
-och inmatningsfält till höger */
+
+/*Inloggningsformuläret delas upp i två kolumner med grid: etiketter till vänster och inmatningsfält till höger */
 form {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 10px;
 }
+
 /* Gör så att rubriken sträcker sig över båda kolumnerna i formuläret */
 form h2 {
     grid-column: 1/-1;
 }
+
 /* Gemensamt utseende för knapparna. Fit-content gör knappen så bred som innehållet behöver. 
 Padding ger luft mellan texten och knappens kanter. Ändrar bakgrundsfärg och textfärg, samt 
 lägger till en kantlinge och rundar hörnen */
@@ -75,18 +81,22 @@ button {
     border: 1px solid #564E4D;
     border-radius: 6px;
 }
+
 /* Ändrar knappens färg när muspekaren förs över den */
 button:hover {
     background-color: #d3dacd;
 }
+
 /* Placerar logga in-knappen i formulärets andra kolumn */
 #loginBtn {
     grid-column: 2;
 }
+
 /* Skapar mellanrum mellan meddelandet och Logga ut-knappen */
 #logoutBtn, #message {
     margin-top: 10px;
 }
+
 /* Anpassningar för större skärmar */
 @media (min-width: 768px) {
 
