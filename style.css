@@ -60,17 +60,28 @@ form {
     grid-template-columns: auto 1fr;
     gap: 10px;
 }
-
-/* Gemensam storlek på knapparna. Fit-content gör baraknappen så bred som innehållet 
-behöver. Padding ger luft mellan texten och knappens kanter */
+/* Gör så att rubriken sträcker sig över båda kolumnerna i formuläret */
+form h2 {
+    grid-column: 1/-1;
+}
+/* Gemensamt utseende för knapparna. Fit-content gör knappen så bred som innehållet behöver. 
+Padding ger luft mellan texten och knappens kanter. Ändrar bakgrundsfärg och textfärg, samt 
+lägger till en kantlinge och rundar hörnen */
 button {
     width: fit-content;
     padding: 4px 8px;
+    background-color: #e5eae1;
+    color: #564E4D;
+    border: 1px solid #564E4D;
+    border-radius: 6px;
 }
-/* Placerar Logga in-knappen i formulärets andra kolumn */
+/* Ändrar knappens färg när muspekaren förs över den */
+button:hover {
+    background-color: #d3dacd;
+}
+/* Placerar logga in-knappen i formulärets andra kolumn */
 #loginBtn {
     grid-column: 2;
-    
 }
 /* Skapar mellanrum mellan meddelandet och Logga ut-knappen */
 #logoutBtn, #message {
